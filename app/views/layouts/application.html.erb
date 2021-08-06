@@ -24,8 +24,8 @@
       <%# // ログインしている時は、上記を表示する %>
       <%# ログインしてない時は、以下を表示させる %>
             <div class="nav__right">
-              <%= link_to "ログイン", class: :nav__btn %>
-              <%= link_to "新規登録", class: :nav__btn %>
+              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
             </div>
       <%# // ログインしていない時は、上記を表示する %>
         </div>
