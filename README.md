@@ -31,6 +31,7 @@ Things you may want to cover:
 | ------------------ | ------ | ----------- |
 | email              | string | null: false |
 | encrypted_password | string | null: false |
+| nickname           | string | null: false |
 
 ### Association
 
