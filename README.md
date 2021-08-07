@@ -1,31 +1,27 @@
-# README
+# アプリケーション名
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MOTTAINAI
 
-Things you may want to cover:
+## 概要
 
-* Ruby version
+DIYの作品を投稿して、コメントができる。
 
-* System dependencies
+## 制作背景(意図)
 
-* Configuration
+ゴミ問題を解決する為に、劣化したり壊れた物を捨てるのではなく  
+DIYを通し自身が行うことで物を永遠に使い続けられることを伝えたいと  
+思い作成しました。
 
-* Database creation
+## DEMO
 
-* Database initialization
+## 実装予定の内容
 
-* How to run the test suite
+- SNS認証
+- 複数枚の画像投稿
 
-* Services (job queues, cache servers, search engines, etc.)
+# DB設計
 
-* Deployment instructions
-
-* ...
-
-#テーブル設計
-
-# users テーブル設計
+## users テーブル設計
 
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
@@ -38,7 +34,7 @@ Things you may want to cover:
 - has_many :creations
 - has_many :comments
 
-# creations テーブル設計
+## creations テーブル設計
 
 | Column      | Type       | Options                       |
 | ----------- | ---------- | ----------------------------- |
@@ -57,7 +53,7 @@ Things you may want to cover:
 - belongs_to :user
 - has_one_attached :image
 
-# comments テーブル設計
+## comments テーブル設計
 
 | Column   | Type       | Options                       |
 | -------- | ---------- | ----------------------------- |
