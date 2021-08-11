@@ -3,6 +3,7 @@
     <div class="form__wrapper">
       <h2 class="page-heading">DIY作品</h2>
       <%= form_with model: @creation, local: true do |f| %> 
+      <%= render 'shared/error_messages', model: f.object %>
           <div class="field">
             <%= f.label :title, "タイトル" %><br />
             <%= f.text_field :title, id:"creation_title", placeholder:"例）キッチンカウンターをDIY" %>
