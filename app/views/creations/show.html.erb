@@ -6,7 +6,7 @@
     <% if current_user == @creation.user %>
       <div class="creation__manage">
         <%= link_to "編集する", edit_creation_path, class: :creation__btn %>
-        <%= link_to "削除する", "/", class: :creation__btn %>
+        <%= link_to "削除する", creation_path(@creation.id), method: :delete, class: :creation__btn %>
       </div>
     <% end %>
     <div class="creation__image">
