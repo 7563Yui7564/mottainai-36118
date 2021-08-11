@@ -5,7 +5,7 @@
     </p>
     <% if current_user == @creation.user %>
       <div class="creation__manage">
-        <%= link_to "編集する", "/", class: :creation__btn %>
+        <%= link_to "編集する", edit_creation_path, class: :creation__btn %>
         <%= link_to "削除する", "/", class: :creation__btn %>
       </div>
     <% end %>
