@@ -33,6 +33,15 @@ class CreationsController < ApplicationController
     end
   end
 
+  def destroy
+    @creation = Creation.find(params[:id])
+    if @creation.destroy
+       redirect_to root_path
+    else
+       redirect_to root_path
+    end
+  end
+
   private
 
   def creation_params
