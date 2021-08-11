@@ -21,7 +21,16 @@ class CreationsController < ApplicationController
   end
 
   def edit
+    @creation = Creation.find(params[:id])  
+  end
+
+  def update
     @creation = Creation.find(params[:id])
+    if @creation.update(creation_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   private
