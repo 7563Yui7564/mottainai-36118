@@ -1,5 +1,6 @@
 class CreationsController < ApplicationController
   def index
+    @creations = Creation.all
   end
 
   def new
