@@ -11,9 +11,14 @@
           <%= image_tag creation.image, class: "creation-img" %> 
         </div>
         <div class='creation-info'>
-          <h3 class='creation-name'> 
-            <%= creation.title %> 
+          <h3 class='creation-category'> 
+            <%= creation.category.name %> 
           </h3> 
+        </div>
+        <div class='creation-info'>
+          <h4 class='creation-title'> 
+            <%= creation.title %> 
+          </h4> 
         </div>
         <% end %> 
        </li> 
