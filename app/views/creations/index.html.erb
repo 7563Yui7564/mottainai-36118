@@ -6,7 +6,7 @@
     <ul class='creation-lists'>
       <% @creations.each do |creation| %>
       <li class='lists'>
-        <%= link_to "/" do %>
+        <%= link_to creation_path(creation.id) do %>
         <div class='creation-img-content'> 
           <%= image_tag creation.image, class: "creation-img" %> 
         </div>
