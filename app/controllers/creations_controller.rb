@@ -9,11 +9,11 @@ class CreationsController < ApplicationController
 
   def create
     @creation = Creation.new(creation_params)
-     if @creation.save
-        redirect_to root_path
-     else
-        render :new
-     end
+      if @creation.save
+         redirect_to root_path
+      else
+         render :new
+      end
   end
 
   private
