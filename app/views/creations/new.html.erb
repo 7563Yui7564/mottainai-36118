@@ -1,11 +1,12 @@
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">DIYの作品</h2>
+      <h2 class="page-heading">DIY作品</h2>
       <%= form_with model: @creation, local: true do |f| %> 
+      <%= render 'shared/error_messages', model: f.object %>
           <div class="field">
             <%= f.label :title, "タイトル" %><br />
-            <%= f.text_field :title, id:"creation_title" %>
+            <%= f.text_field :title, id:"creation_title", placeholder:"例）キッチンカウンターをDIY" %>
           </div>
 
           <div class="field">
@@ -20,27 +21,28 @@
 
           <div class="field">
             <%= f.label :cost, "費用" %><br />
-            <%= f.text_field :cost, class: :form__text, id:"creation_cost" %>
+            <span class="sell-yen">¥</span>
+            <%= f.text_field :cost, class: :form__text, id:"creation_cost", placeholder: "500" %>
           </div>
 
            <div class="field">
             <%= f.label :material, "材料" %><br />
-            <%= f.text_field :material, class: :form__text, id:"creation_material" %>
+            <%= f.text_field :material, class: :form__text, id:"creation_material", placeholder: "木材等" %>
           </div>
 
           <div class="field">
             <%= f.label :tool, "道具" %><br />
-            <%= f.text_field :tool, class: :form__text, id:"creation_tool" %>
+            <%= f.text_field :tool, class: :form__text, id:"creation_tool", placeholder: "メジャー等" %>
           </div>
 
           <div class="field">
             <%= f.label :description, "説明" %><br />
-            <%= f.text_area :description, class: :form__text, id:"creation_description" %>
+            <%= f.text_area :description, class: :form__text, id:"creation_description", placeholder: "作品の苦労・工夫した点を教えてください" %>
           </div>
 
           <div class="field">
             <%= f.label :trigger, "初めたきっかけ" %><br />
-            <%= f.text_area :trigger, class: :form__text, id:"creation_trigger" %>
+            <%= f.text_area :trigger, class: :form__text, id:"creation_trigger", placeholder: "DIYを初めたきっかけを教えてください" %>
           </div>
 
           <div class="actions">
