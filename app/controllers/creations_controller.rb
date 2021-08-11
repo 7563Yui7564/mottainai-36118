@@ -20,6 +20,10 @@ class CreationsController < ApplicationController
     @creation = Creation.find(params[:id])
   end
 
+  def edit
+    @creation = Creation.find(params[:id])
+  end
+
   private
 
   def creation_params
