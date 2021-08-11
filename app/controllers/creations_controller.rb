@@ -1,6 +1,10 @@
 class CreationsController < ApplicationController
+  before_action :set_creation, except: [:index, :new, :create]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :contributor_confirmation, only: [:edit, :update, :destroy]
+
   def index
-    @creations = Creation.all
+    @creations = Creation.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -17,19 +21,24 @@ class CreationsController < ApplicationController
   end
 
   def show
-    @creation = Creation.find(params[:id])
   end
 
   def edit
-    @creation = Creation.find(params[:id])  
   end
 
   def update
-    @creation = Creation.find(params[:id])
     if @creation.update(creation_params)
       redirect_to root_path
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @creation.destroy
+       redirect_to root_path
+    else
+       redirect_to root_path
     end
   end
 
@@ -38,5 +47,13 @@ class CreationsController < ApplicationController
   def creation_params
     params.require(:creation).permit(:title, :category_id, :image, :cost,
        :material, :tool, :description, :trigger).merge(user_id: current_user.id)
+  end
+
+  def set_creation
+    @creation = Creation.find(params[:id])
+  end
+
+  def contributor_confirmation
+    redirect_to root_path unless current_user == @creation.user
   end
 end
