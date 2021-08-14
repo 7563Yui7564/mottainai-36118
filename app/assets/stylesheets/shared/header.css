@@ -1,0 +1,23 @@
+/* ヘッダー */
+
+.header {
+  padding: 20px 0px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__btn {
+  background-color: #66cdaa;
+  color: white;
+  font-size: 1.0em;
+  padding: 0.8em 1.2em;
+  margin-right: 1vw;
+}
+
+.nav__btn:hover {
+  opacity: 0.6;
+}
+

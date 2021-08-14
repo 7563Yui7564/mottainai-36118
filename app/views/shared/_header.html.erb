@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="nav">
+    <div class="nav__left">
+      <h1><%= link_to "MOTTAINAI", root_path, class: :title %></h1>
+    </div>
+    <% if user_signed_in? %>
+      <%# ログインしている時は、以下を表示する %>
+      <div class="nav__right">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn %> 
+        <%= link_to "投稿する", new_creation_path, class: :nav__btn %>
+      </div>
+    <% else %>
+      <%# // ログインしている時は、上記を表示する %>
+      <%# ログインしてない時は、以下を表示させる %>
+      <div class="nav__right">
+        <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+        <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+      </div>
+      <%# // ログインしていない時は、上記を表示する %>
+    <% end %>
+  </div>
+</header>
