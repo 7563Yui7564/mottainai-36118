@@ -1,0 +1,30 @@
+.registrations__main {
+  display: flex;
+  justify-content: center;
+ }
+
+.form__header__text {
+ text-align: center;
+}
+
+.form__group {
+  padding-top: 20px;
+}
+
+ .input__default {
+   padding: 10px 50px 8px;
+   margin-top: 5px;
+ }
+
+ .register__btn {
+   width: 50%;
+   margin: 20px auto;
+ }
+
+ .register__red__btn {
+   background-color: red;
+   border: 1px solid red;
+   color: white;
+   width: 100%;
+   line-height: 48px;
+ }
