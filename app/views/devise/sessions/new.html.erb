@@ -1,20 +1,32 @@
-<h2>ログイン</h2>
+<h1><%= link_to "MOTTAINAI", root_path %></h1>
 
-<%= form_with model: @user, url: user_session_path, local: true do |f| %>
-  
-  <div class="field">
-    <%= f.label :email, "メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<%= form_with model: @user, url: user_session_path, class: :registrations__main, local: true do |f| %>
+<div class='form__wrap'>
+  <div class='form__header'>
+    <h2 class='form__header__text'>
+      ログイン
+    </h2>
   </div>
 
-  <div class="field">
-    <%= f.label :password, "パスワード(6文字以上)" %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class="form__group">
+    <div class='form__text__wrap'>
+      <%= f.label :email, "メールアドレス" %><br />
+      <%= f.email_field :email, class: :input__default, autofocus: true, autocomplete: "email" %>
+    </div>
+  </div>
+
+  <div class="form__group">
+    <div class="form__text__wrap">
+      <%= f.label :password, "パスワード(6文字以上)" %><br />
+      <%= f.password_field :password, class: :input__default, autocomplete: "current-password" %>
+    </div>
   </div>
 
 
-  <div class="actions">
-    <%= f.submit "ログイン" %>
+  <div class="login__btn">
+    <%= f.submit "ログイン", class:"login__red__btn" %>
   </div>
+</div>
 <% end %>
+
 

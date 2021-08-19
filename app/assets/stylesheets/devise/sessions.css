@@ -1,0 +1,13 @@
+.login__btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login__red__btn {
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+  width: 100%;
+  line-height: 48px;
+}
