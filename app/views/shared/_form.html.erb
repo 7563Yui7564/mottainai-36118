@@ -1,65 +1,65 @@
 <%= form_with model: creation, local: true do |f| %> 
 <%= render 'shared/error_messages', model: f.object %>
     
-    <div class="form-group">
-      <div class="form-text-wrap">
+    <div class="creation__group">
+      <div class="field">
         <%= f.label :title, "タイトル" %><br />
-        <%= f.text_field :title, class:"creations-text", id:"creation_title", placeholder:"例）キッチンカウンターをDIY" %>
+        <%= f.text_field :title, class: :creation__text, id:"creation_title", placeholder:"例）キッチンカウンターをDIY" %>
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="creation__group">
       <div class="form-text-wrap">
         <%= f.label :category_id, "カテゴリー" %><br />
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class: :select__box, id:"creation_category_id"}) %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class: :creation__category, id:"creation_category_id"}) %>
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="creation__group">
       <div class="form-text-wrap">
         <%= f.label :image, "画像" %><br />
-        <%= f.file_field :image, id:"creation_image" %>
+        <%= f.file_field :image, class: :creation__image, id:"creation_image" %>
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="creation__group">
       <div class="form-text-wrap">
         <%= f.label :cost, "費用" %><br />
         <span class="sell-yen">¥</span>
-        <%= f.text_field :cost, class:"creations-text", id:"creation_cost", placeholder: "500" %>
+        <%= f.text_field :cost, class:"creation__text", id:"creation_cost", placeholder: "500" %>
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="creation__group">
       <div class="form-text-wrap">
         <%= f.label :material, "材料" %><br />
-        <%= f.text_field :material, class:"creations-text", id:"creation_material", placeholder: "木材等" %>
+        <%= f.text_field :material, class:"creation__text", id:"creation_material", placeholder: "木材等" %>
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="creation__group">
       <div class="form-text-wrap">  
         <%= f.label :tool, "道具" %><br />
-        <%= f.text_field :tool, class:"creations-text", id:"creation_tool", placeholder: "メジャー等" %>
+        <%= f.text_field :tool, class:"creation__text", id:"creation_tool", placeholder: "メジャー等" %>
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="creation__group">
       <div class="form-text-wrap">
         <%= f.label :description, "説明" %><br />
-        <%= f.text_area :description, class:"creations-text", id:"creation_description", placeholder: "作品の苦労・工夫した点を教えてください", rows:"7" %>
+        <%= f.text_area :description, class:"creation__description", id:"creation_description", placeholder: "作品の苦労・工夫した点を教えてください", rows:"7" %>
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="creation__group">
       <div class="form-text-wrap">
         <%= f.label :trigger, "きっかけ" %><br />
-        <%= f.text_area :trigger, class:"creations-text", id:"creation_trigger", placeholder: "DIYを初めようとしたきっかけを教えてください", rows:"7" %>
+        <%= f.text_area :trigger, class:"creation__trigger", id:"creation_trigger", placeholder: "DIYを初めようとしたきっかけを教えてください", rows:"7" %>
       </div>
     </div>
 
-    <div class="save-btn-contents">
-      <%= f.submit "保存する", class:"save-btn" %>
-      <%= link_to "戻る", root_path, class:"back-btn" %>
+    <div class="save__btn__contents">
+      <%= f.submit "保存する", class:"save__btn" %>
+      <%= link_to "戻る", root_path, class:"back__btn" %>
     </div>
 <% end %> 

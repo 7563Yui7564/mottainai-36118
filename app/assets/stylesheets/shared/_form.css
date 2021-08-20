@@ -1,0 +1,52 @@
+.creation__group {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.creation__text {
+  padding: 10px 50px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.creation__category {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.creation__image {
+  padding: 10px 5px;
+}
+
+.creation__description {
+  padding: 30px 200px;
+  margin-top: 10px;
+}
+
+.creation__trigger {
+  padding: 30px 200px;
+  margin-top: 10px;
+}
+
+.save__btn__contents {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.save__btn {
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+  margin-right: 2vw;
+  padding: 10px 20px;
+}
+
+.back__btn {
+  color: white;
+  background-color: gray;
+  border: 1px solid gray;
+  padding: 10px 20px;
+}

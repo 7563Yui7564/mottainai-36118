@@ -11,21 +11,21 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="form__group">
-    <div class="field">
+    <div class="form__text__wrap">
       <%= f.label :nickname, "ニックネーム" %><br />
       <%= f.text_field :nickname, class: :input__default %>
     </div>
   </div>
 
   <div class="form__group">
-    <div class="field">
+    <div class="form__text__wrap">
       <%= f.label :email, "メールアドレス" %><br />
       <%= f.email_field :email, class: :input__default, autofocus: true, autocomplete: "email" %>
     </div>
   </div>
 
   <div class="form__group">
-    <div class="field">
+    <div class="forn__text__wrap">
       <%= f.label :password, "パスワード" %>
       <% if @minimum_password_length %>
        <em>(<%= @minimum_password_length %> 文字以上の半角英数字混合)</em>
@@ -35,7 +35,7 @@
   </div>
 
   <div class="form__group">
-    <div class="field">
+    <div class="form__text__wrap">
       <%= f.label :password_confirmation, "パスワード(確認)" %><br />
       <%= f.password_field :password_confirmation, class: :input__default, autocomplete: "new-password" %>
     </div>
