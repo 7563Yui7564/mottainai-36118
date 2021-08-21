@@ -1,61 +1,78 @@
 <h1><%= link_to "MOTTAINAI", root_path %></h1>
 
 <main class="main">
-  <div class="creation__wrapper">
-    <p class="creation__hedding">
-      <%= @creation.title %>
-    </p>
-    <% if current_user == @creation.user %>
-      <div class="creation__manage">
-        <%= link_to "編集する", edit_creation_path, class: :creation__btn %>
-        <%= link_to "削除する", creation_path(@creation.id), method: :delete, class: :creation__btn %>
-      </div>
-    <% end %>
-    <div class="creation__image">
-      <%= image_tag @creation.image %>
-    </div>
-    <div class="creation__body">
-      <div class="creation__detail"> 
-        <p class="detail__title">カテゴリー</p>
-        <p class="detail__message">
-          <%= @creation.category.name %>
+  <div class="inner">
+    <div class="creation__wraper">
+      <% if current_user == @creation.user %>
+        <div class="creation__manage">
+          <%= link_to "編集する", edit_creation_path, class: :edit__btn %>
+          <%= link_to "削除する", creation_path(@creation.id), method: :delete, class: :delete__btn %>
+        </div>
+      <% end %>
+      <div class="creation__detail">
+        <p class="creation__hedding">
+          <%= @creation.title %>
         </p>
       </div>
-      <div class="creation__detail"> 
-        <p class="detail__title">費用</p>
-        <p class="detail__message">
-          <%= @creation.cost %>
-        </p>
+      <div class="creation__image">
+        <%= image_tag @creation.image, class: :creation__image__form %>
       </div>
-      <div class="creation__detail"> 
-        <p class="detail__title">材料</p>
-        <p class="detail__message">
-          <%= @creation.material %>
-        </p>
-      </div>
-      <div class="creation__detail"> 
-        <p class="detail__title">工具</p>
-        <p class="detail__message">
-          <%= @creation.tool %>
-        </p>
-      </div>
-      <div class="creation__detail"> 
-        <p class="detail__title">説明</p>
-        <p class="detail__message">
-          <%= @creation.description %>
-        </p>
-      </div>
-      <div class="creation__detail"> 
-        <p class="detail__title">初めたきっかけ</p>
-        <p class="detail__message">
-          <%= @creation.trigger %>
-        </p>
-      </div>
-      <div class="creation__detail"> 
-        <p class="detail__title">投稿者</p>
-        <p class="detail__message">
-          <%= @creation.user.nickname %>
-        </p>
+      <div class="creation__body">
+        <div class="creation__detail"> 
+          <p class="detail__title">カテゴリー</p>
+        </div>
+        <div class="creation__main">
+          <p class="detail__message">
+            <%= @creation.category.name %>
+          </p>
+        </div>
+        <div class="creation__detail"> 
+          <p class="detail__title">費用</p>
+        </div>
+        <div class="creation__main">
+          <p class="detail__message">
+            <%= "¥#{@creation.cost}" %>
+          </p>
+        </div>
+        <div class="creation__detail"> 
+          <p class="detail__title">材料</p>
+        </div>
+        <div class="creation__main">
+          <p class="detail__message">
+            <%= @creation.material %>
+          </p>
+        </div>
+        <div class="creation__detail"> 
+          <p class="detail__title">工具</p>
+        </div>
+        <div class="creation__main">
+          <p class="detail__message">
+            <%= @creation.tool %>
+          </p>
+        </div>
+        <div class="creation__detail"> 
+          <p class="detail__title">説明</p>
+        </div>
+        <div class="creation__main">
+          <p class="detail__message">
+            <%= @creation.description %>
+          </p>
+        </div>
+        <div class="creation__detail"> 
+          <p class="detail__title">初めたきっかけ</p>
+        </div>
+        <div class="creation__main">
+          <p class="detail__message">
+            <%= @creation.trigger %>
+          </p>
+        </div>
+        <div class="creation__detail"> 
+          <p class="detail__title">投稿者</p>
+        </div>
+        <div class="creation__main">
+          <p class="detail__message">
+            <%= @creation.user.nickname %>
+          </p>
       </div>
     </div>
   </div>

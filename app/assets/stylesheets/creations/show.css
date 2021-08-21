@@ -1,0 +1,46 @@
+.creation__manage {
+  display: flex;
+  justify-content: center;
+}
+.edit__btn {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  margin-right: 2vw;
+  padding: 10px 20px;
+}
+
+.delete__btn {
+  background-color: gray;
+  color: white;
+  border: 1px solid gray;
+  padding: 10px 20px;
+}
+
+.creation__hedding {
+  font-size: 20px;
+}
+
+.creation__image {
+  display: flex;
+  justify-content: center;
+}
+
+.creation__image__form {
+  width: 500px;
+}
+
+.creation__detail {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.creation__main {
+  display: flex;
+  justify-content: center;
+}
+
+.detail__message {
+  font-size: 20px;
+}
