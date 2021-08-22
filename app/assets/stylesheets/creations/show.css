@@ -10,11 +10,19 @@
   padding: 10px 20px;
 }
 
+.edit__btn:hover {
+  opacity: 0.6;
+}
+
 .delete__btn {
   background-color: gray;
   color: white;
   border: 1px solid gray;
   padding: 10px 20px;
+}
+
+.delete__btn:hover {
+  opacity: 0.6;
 }
 
 .creation__hedding {
