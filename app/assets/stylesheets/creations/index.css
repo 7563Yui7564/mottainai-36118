@@ -1,0 +1,20 @@
+.title {
+ text-align: center;
+ margin: 30px auto;
+}
+
+.creation__lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+.creation__img {
+  width: 33vh;
+  height: 33vh;
+  
+}
+
+.creation__img:hover {
+  opacity: 0.6;
+}
+

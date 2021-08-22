@@ -3,28 +3,28 @@
 
 <div class='main'>
   <%# 作品一覧 %>
-  <div class='creation-contents'>
+  <div class='creation__contents'>
     <h2 class='title'>作品一覧</h2>
 
-    <ul class='creation-lists'>
+    <ul class='creation__lists'>
       <% @creations.each do |creation| %>
       <li class='lists'>
         <%= link_to creation_path(creation.id) do %>
-        <div class='creation-img-content'> 
-          <%= image_tag creation.image, class: "creation-img" %> 
+        <div class='creation__img__content'> 
+          <%= image_tag creation.image, class: :creation__img %> 
         </div>
-        <div class='creation-info'>
-          <h3 class='creation-category'> 
+        <div class='creation__info'>
+          <h3 class='creation__lists__category'> 
             <%= creation.category.name %> 
           </h3> 
         </div>
-        <div class='creation-info'>
-          <h4 class='creation-title'> 
+        <div class='creation__info'>
+          <h4 class='creation__title'> 
             <%= creation.title %> 
           </h4> 
         </div>
         <% end %> 
-       </li> 
+      </li> 
       <% end %>
     </ul>
   </div>  
