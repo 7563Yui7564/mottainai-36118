@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :creations
+  has_many :comments
 
          validates :nickname, presence: true
          # パスワードは、半角英数字混合での入力が必須であること
