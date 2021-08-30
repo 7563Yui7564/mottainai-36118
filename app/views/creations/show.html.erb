@@ -86,6 +86,16 @@
             </div>
           <% end %>
         <% end %>
+      </div>
+      <ul class="comments__lists">
+        <% @comments.each do |comment| %>
+          <li class="comments__list">
+            <%= comment.created_at %>
+            <%= comment.text %>
+            <%= comment.user.nickname %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </main>
