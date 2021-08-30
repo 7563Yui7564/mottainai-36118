@@ -52,3 +52,27 @@
 .detail__message {
   font-size: 20px;
 }
+
+.creation__comment__group {
+  display: flex;
+  justify-content: center ;
+  text-align: left;
+}
+
+.creation__comment {
+  padding: 40px 80px;
+  margin-top: 40px;
+}
+
+.send__btn__contents {
+  display: flex;
+  justify-content: center;
+}
+
+.send__btn {
+  color: white;
+  background-color: royalblue;
+  border: 1px solid royalblue;
+  margin: 10px 0px;
+  padding: 10px 20px;
+}
