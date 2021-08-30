@@ -87,10 +87,10 @@
           <% end %>
         <% end %>
       </div>
+      <h4>＜コメント一覧＞</h4>
       <ul class="comments__lists">
         <% @comments.each do |comment| %>
           <li class="comments__list">
-            <%= comment.created_at %>
             <%= comment.text %>
             <%= comment.user.nickname %>
           </li>
