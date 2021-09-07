@@ -11,3 +11,7 @@
   width: 100%;
   line-height: 48px;
 }
+
+.login__red__btn:hover {
+  opacity: 0.6;
+}
