@@ -12,9 +12,9 @@
 }
 
  .input__default {
-   padding: 10px 50px 8px;
    margin-top: 5px;
    font-size: 16px;
+   height: 40px;
  }
 
  .register__btn {
@@ -28,4 +28,8 @@
    color: white;
    width: 100%;
    line-height: 48px;
+ }
+
+ .register__red__btn:hover {
+   opacity: 0.6;
  }

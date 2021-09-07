@@ -13,14 +13,14 @@
   <div class="form__group">
     <div class="form__text__wrap">
       <%= f.label :nickname, "ニックネーム" %><br />
-      <%= f.text_field :nickname, class: :input__default %>
+      <%= f.text_field :nickname, class: :input__default, size:40 %>
     </div>
   </div>
 
   <div class="form__group">
     <div class="form__text__wrap">
       <%= f.label :email, "メールアドレス" %><br />
-      <%= f.email_field :email, class: :input__default, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, class: :input__default, autofocus: true, autocomplete: "email", size:40 %>
     </div>
   </div>
 
@@ -30,14 +30,14 @@
       <% if @minimum_password_length %>
        <em>(<%= @minimum_password_length %> 文字以上の半角英数字混合)</em>
       <% end %><br />
-        <%= f.password_field :password, class: :input__default, autocomplete: "new-password" %>
+        <%= f.password_field :password, class: :input__default, autocomplete: "new-password", size:40 %>
     </div>
   </div>
 
   <div class="form__group">
     <div class="form__text__wrap">
       <%= f.label :password_confirmation, "パスワード(確認)" %><br />
-      <%= f.password_field :password_confirmation, class: :input__default, autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, class: :input__default, autocomplete: "new-password" ,size:40 %>
     </div>
   </div>
 
