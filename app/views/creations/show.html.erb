@@ -79,7 +79,7 @@
         <% if user_signed_in? %>
           <%= form_with model: [@creation, @comment], local: true do |f| %>
             <div class="form__commment">
-              <%= f.text_area :text, class: :creation__comment, placeholder: "コメントする" %>
+              <%= f.text_area :text, class: :creation__comment, placeholder: "コメントする", size:"40x7" %>
             </div>
             <div class="send__btn__contents">
               <%= f.submit "送信する", class: :send__btn %>                            
