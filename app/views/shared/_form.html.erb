@@ -4,7 +4,7 @@
     <div class="creation__group">
       <div class="field">
         <%= f.label :title, "タイトル" %><br />
-        <%= f.text_field :title, class: :creation__text, id:"creation_title", placeholder:"例）キッチンカウンターをDIY" %>
+        <%= f.text_field :title, class: :creation__text, id:"creation_title", placeholder:"例）キッチンカウンターをDIY", size:30 %>
       </div>
     </div>
 
@@ -26,35 +26,35 @@
       <div class="form-text-wrap">
         <%= f.label :cost, "費用" %><br />
         <span class="sell-yen">¥</span>
-        <%= f.text_field :cost, class:"creation__text", id:"creation_cost", placeholder: "500" %>
+        <%= f.text_field :cost, class: :creation__text, id:"creation_cost", placeholder: "500", size:20 %>
       </div>
     </div>
 
     <div class="creation__group">
       <div class="form-text-wrap">
         <%= f.label :material, "材料" %><br />
-        <%= f.text_field :material, class:"creation__text", id:"creation_material", placeholder: "木材等" %>
+        <%= f.text_field :material, class: :creation__text, id:"creation_material", placeholder: "木材等", size:30 %>
       </div>
     </div>
 
     <div class="creation__group">
       <div class="form-text-wrap">  
         <%= f.label :tool, "道具" %><br />
-        <%= f.text_field :tool, class:"creation__text", id:"creation_tool", placeholder: "メジャー等" %>
+        <%= f.text_field :tool, class: :creation__text, id:"creation_tool", placeholder: "メジャー等", size:30 %>
       </div>
     </div>
 
     <div class="creation__group">
       <div class="form-text-wrap">
         <%= f.label :description, "説明" %><br />
-        <%= f.text_area :description, class:"creation__description", id:"creation_description", placeholder: "作品の苦労・工夫した点を教えてください", rows:"7" %>
+        <%= f.text_area :description, class: :creation__description, id:"creation_description", placeholder: "作品の苦労・工夫した点を教えてください", size:"60x7" %>
       </div>
     </div>
 
     <div class="creation__group">
       <div class="form-text-wrap">
         <%= f.label :trigger, "きっかけ" %><br />
-        <%= f.text_area :trigger, class:"creation__trigger", id:"creation_trigger", placeholder: "DIYを初めようとしたきっかけを教えてください", rows:"7" %>
+        <%= f.text_area :trigger, class: :creation__trigger, id:"creation_trigger", placeholder: "DIYを初めようとしたきっかけを教えてください", size:"60x7" %>
       </div>
     </div>
 

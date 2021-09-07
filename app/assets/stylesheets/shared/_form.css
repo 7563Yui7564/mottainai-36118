@@ -5,27 +5,25 @@
 }
 
 .creation__text {
-  padding: 10px 50px;
   margin-top: 10px;
   font-size: 16px;
+  height: 40px;
 }
 
 .creation__category {
-  padding: 10px 20px;
+  height: 30px;
   margin-top: 10px;
 }
 
 .creation__image {
-  padding: 10px 5px;
+  margin-top: 10px;
 }
 
 .creation__description {
-  padding: 30px 200px;
   margin-top: 10px;
 }
 
 .creation__trigger {
-  padding: 30px 200px;
   margin-top: 10px;
 }
 
