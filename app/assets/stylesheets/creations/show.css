@@ -76,3 +76,17 @@
   margin: 10px 0px;
   padding: 10px 20px;
 }
+
+.send__btn:hover {
+  opacity: 0.6;
+}
+
+.comment {
+  display: flex;
+  justify-content: center;
+}
+
+.comments__list {
+  display: flex;
+  justify-content: center;
+}
