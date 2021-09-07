@@ -21,6 +21,8 @@ class CreationsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @creation.comments
   end
 
   def edit

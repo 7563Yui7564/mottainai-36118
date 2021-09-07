@@ -73,7 +73,31 @@
           <p class="detail__message">
             <%= @creation.user.nickname %>
           </p>
+        </div>
       </div>
+      <div class="creation__comment__group">
+        <% if user_signed_in? %>
+          <%= form_with model: [@creation, @comment], local: true do |f| %>
+            <div class="form__commment">
+              <%= f.text_area :text, class: :creation__comment, placeholder: "コメントする" %>
+            </div>
+            <div class="send__btn__contents">
+              <%= f.submit "送信する", class: :send__btn %>                            
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="comment">
+        <h4>＜コメント一覧＞</h4>
+      </div>
+      <ul class="comments__lists">
+        <% @comments.each do |comment| %>
+          <li class="comments__list">
+            <%= comment.text %>
+            <%= comment.user.nickname %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </main>
