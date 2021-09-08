@@ -1,3 +1,31 @@
+.image__background {
+  position: relative;
+}
+
+.font {
+  font-size: 2em;
+  font-weight: bold;
+  font-family :Quicksand, sans-serif;
+  color: white;
+  position: absolute;
+  background-color: #f6b483;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.font__image {
+  font-size: 2em;
+  font-weight: bold;
+  font-family :Quicksand, sans-serif;
+  color: white;
+  position: absolute;
+  background-color: #f6b483;
+  top: 0;
+  left: 0;
+  margin-top: 70px;
+}
+
 .title {
  text-align: center;
  margin: 30px auto;
